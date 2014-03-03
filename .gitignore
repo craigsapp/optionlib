@@ -11,3 +11,10 @@
 *.lai
 *.la
 *.a
+
+
+tests/aliases
+tests/arguments
+tests/datatypes
+
+
