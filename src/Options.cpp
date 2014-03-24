@@ -40,6 +40,8 @@ Option_register::Option_register(void) {
 
 Option_register::Option_register(const string& aDefinition, char aType,
       const string& aDefaultOption) {
+   type = 's';
+   modifiedQ = 0;
    setType(aType);
    setDefinition(aDefinition);
    setDefault(aDefaultOption);
@@ -47,6 +49,8 @@ Option_register::Option_register(const string& aDefinition, char aType,
 
 Option_register::Option_register(const string& aDefinition, char aType,
       const string& aDefaultOption, const string& aModifiedOption) {
+   type = 's';
+   modifiedQ = 0;
    setType(aType);
    setDefinition(aDefinition);
    setDefault(aDefaultOption);
