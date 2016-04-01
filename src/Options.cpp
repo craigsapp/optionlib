@@ -174,9 +174,9 @@ const string& Option_register::getOption(void) {
 //
 
 void Option_register::reset(void) {
-   definition.clear();
-   defaultOption.clear();
-   modifiedOption.clear();
+   definition.resize(0);
+   defaultOption.resize(0);
+   modifiedOption.resize(0);
 }
 
 
@@ -972,7 +972,7 @@ void Options::xverify(int error_check, int suppress) {
    // if calling xverify again, must remove previous argument list.
    int i;
    if (argument.size() != 0) {
-      for (i=0; i<argument.size(); i++) {
+      for (i=0; i<(int)argument.size(); i++) {
          delete argument[i];
       }
       argument.resize(0);
